@@ -1,0 +1,19 @@
+/*
+!favicon.ico
+!robots.txt
+!.gitignore
+!wp-content/
+!yandex_*.html
+!mailru-*.html
+
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+
+wp-content/plugins/akismet/
+wp-content/plugins/hello.php
+
+wp-content/themes/*
+# !wp-content/themes/twentytwentyfive
+
+
