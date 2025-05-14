@@ -15,5 +15,6 @@ wp-content/plugins/hello.php
 
 wp-content/themes/*
 !wp-content/themes/blocksy
+!wp-content/themes/cosmobotsad
 
 
