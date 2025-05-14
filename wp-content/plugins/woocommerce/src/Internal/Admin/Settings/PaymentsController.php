@@ -3,11 +3,12 @@ declare( strict_types=1 );
 
 namespace Automattic\WooCommerce\Internal\Admin\Settings;
 
-use Automattic\WooCommerce\Internal\Admin\FeaturePlugin;
 use Automattic\WooCommerce\Internal\Features\FeaturesController;
 use Automattic\WooCommerce\Utilities\FeaturesUtil;
 use Exception;
-use WooCommerce\Admin\Experimental_Abtest;
+use WC_Gateway_BACS;
+use WC_Gateway_Cheque;
+use WC_Gateway_COD;
 
 defined( 'ABSPATH' ) || exit;
 /**
@@ -35,53 +36,6 @@ class PaymentsController {
 	}
 
 	/**
-	 * Adjust the new Payments Settings page feature default enablement based on the experiment.
-	 * This is invoked from within FeaturesController.
-	 *
-	 * @param FeaturesController $features_controller The features controller instance.
-	 *
-	 * @return void
-	 */
-	public function adjust_feature_default_enablement_by_experiment( FeaturesController $features_controller ) {
-		// Needed for CLI and unit tests.
-		FeaturePlugin::instance()->init();
-
-		// If the feature is disabled (or doesn't exist), don't do anything.
-		if ( ! $features_controller->feature_is_enabled( 'reactify-classic-payments-settings' ) ) {
-			return;
-		}
-
-		// We only want to adjust the default feature value.
-		// If the feature value is already set in the DB, don't do anything.
-		$option_name = $features_controller->feature_enable_option_name( 'reactify-classic-payments-settings' );
-		if ( get_option( $option_name ) !== false ) {
-			return;
-		}
-
-		// Transient key to handle the experiment group assignment failure.
-		$transient_key = 'wc_experiment_failure_woocommerce_payment_settings_2025_v2';
-
-		// If we failed to determine the experiment group assignment in the previous hour, don't do anything.
-		if ( 'error' === get_transient( $transient_key ) ) {
-			return;
-		}
-
-		try {
-			$in_treatment = Experimental_Abtest::in_treatment( 'woocommerce_payment_settings_2025_v2' );
-		} catch ( \Exception $e ) {
-			// If the experiment group assignment fails, set a transient to avoid repeated fetches and
-			// consider the user not in the treatment group.
-			set_transient( $transient_key, 'error', HOUR_IN_SECONDS );
-			$in_treatment = false;
-		}
-
-		// If the user is NOT in the experiment treatment group disable the feature.
-		if ( ! $in_treatment ) {
-			$features_controller->change_feature_enable( 'reactify-classic-payments-settings', false );
-		}
-	}
-
-	/**
 	 * Delayed hook registration.
 	 */
 	public function delayed_register() {
@@ -93,6 +47,7 @@ class PaymentsController {
 		add_action( 'admin_menu', array( $this, 'add_menu' ) );
 		add_filter( 'woocommerce_admin_shared_settings', array( $this, 'preload_settings' ) );
 		add_filter( 'woocommerce_admin_allowed_promo_notes', array( $this, 'add_allowed_promo_notes' ) );
+		add_filter( 'woocommerce_get_sections_checkout', array( $this, 'handle_sections' ), 20 );
 	}
 
 	/**
@@ -112,10 +67,12 @@ class PaymentsController {
 	public function add_menu() {
 		global $menu;
 
-		// The WooPayments plugin must not be active.
-		// When active, WooPayments will own the Payments menu item since it is the native Woo payments solution.
-		if ( $this->is_woopayments_active() ) {
+		// When WooPayments account is onboarded, WooPayments will own the Payments menu item since it is the native Woo payments solution.
+		if ( $this->is_woopayments_account_onboarded() ) {
 			return;
+		} else {
+			// Otherwise, remove Payments menu item linking to the connect page to avoid Payments menu item duplication.
+			remove_menu_page( 'wc-admin&path=/payments/connect' );
 		}
 
 		$menu_title = esc_html__( 'Payments', 'woocommerce' );
@@ -201,6 +158,24 @@ class PaymentsController {
 	}
 
 	/**
+	 * Alter the Payments tab sections under certain conditions.
+	 *
+	 * @param array $sections The payments/checkout tab sections.
+	 *
+	 * @return array The filtered sections.
+	 */
+	public function handle_sections( array $sections ): array {
+		global $current_section;
+
+		// For WooPayments and offline payment methods settings pages, we don't want any section navigation.
+		if ( in_array( $current_section, array( 'woocommerce_payments', WC_Gateway_BACS::ID, WC_Gateway_Cheque::ID, WC_Gateway_COD::ID  ), true ) ) {
+			return array();
+		}
+
+		return $sections;
+	}
+
+	/**
 	 * Check if the store has any enabled gateways (including offline payment methods).
 	 *
 	 * @return bool True if the store has any enabled gateways, false otherwise.
@@ -232,27 +207,91 @@ class PaymentsController {
 
 		// Go through the providers and check if any of them have a "prominently" visible incentive (i.e., modal or banner).
 		foreach ( $providers as $provider ) {
-			// We check to see if the incentive was dismissed in the banner context.
-			// In case an incentive uses the modal surface also (like the WooPayments Switch incentive),
-			// we rely on the fact that the modal falls back to the banner, once dismissed.
-			if ( ! empty( $provider['_incentive'] ) &&
-				( empty( $provider['_incentive']['_dismissals'] ) ||
-					! in_array( 'wc_settings_payments__banner', $provider['_incentive']['_dismissals'], true )
-				)
-			) {
+			if ( empty( $provider['_incentive'] ) ) {
+				continue;
+			}
+
+			$dismissals = $provider['_incentive']['_dismissals'] ?? array();
+
+			// If there are no dismissals at all, the incentive is prominently visible.
+			if ( empty( $dismissals ) ) {
 				return true;
 			}
+
+			// First, we check to see if the incentive was dismissed in the banner context.
+			// The banner context has the lowest priority, so if it was dismissed, we don't need to check the modal context.
+			// If the banner is dismissed, there is no prominent incentive.
+			$is_dismissed_banner = ! empty(
+				array_filter(
+					$dismissals,
+					function ( $dismissal ) {
+						return isset( $dismissal['context'] ) && 'wc_settings_payments__banner' === $dismissal['context'];
+					}
+				)
+			);
+			if ( $is_dismissed_banner ) {
+				continue;
+			}
+
+			// In case an incentive uses the modal surface also (like the WooPayments Switch incentive),
+			// we rely on the fact that the modal falls back to the banner, once dismissed, after 30 days.
+			// @see here's its frontend "brother" in client/admin/client/settings-payments/settings-payments-main.tsx.
+			$is_dismissed_modal = ! empty(
+				array_filter(
+					$dismissals,
+					function ( $dismissal ) {
+						return isset( $dismissal['context'] ) && 'wc_settings_payments__modal' === $dismissal['context'];
+					}
+				)
+			);
+			// If there are no modal dismissals, the incentive is still visible.
+			if ( ! $is_dismissed_modal ) {
+				return true;
+			}
+
+			$is_dismissed_modal_more_than_30_days_ago = ! empty(
+				array_filter(
+					$dismissals,
+					function ( $dismissal ) {
+						return isset( $dismissal['context'], $dismissal['timestamp'] ) &&
+							'wc_settings_payments__modal' === $dismissal['context'] &&
+							$dismissal['timestamp'] < strtotime( '-30 days' );
+					}
+				)
+			);
+			// If the modal was dismissed less than 30 days ago, there is no prominent incentive (aka the banner is not shown).
+			if ( ! $is_dismissed_modal_more_than_30_days_ago ) {
+				continue;
+			}
+
+			// The modal was dismissed more than 30 days ago, so the banner is visible.
+			return true;
 		}
 
 		return false;
 	}
 
 	/**
-	 * Check if the WooPayments plugin is active.
+	 * Check if the WooPayments account is onboarded.
 	 *
 	 * @return boolean
 	 */
-	private function is_woopayments_active(): bool {
-		return class_exists( '\WC_Payments' );
+	private function is_woopayments_account_onboarded(): bool {
+		// If WooPayments is active right now, we will not get to this point since the plugin is active check is done first.
+		if ( ! class_exists( '\WC_Payments' ) ) {
+			return false;
+		}
+
+		$account_data = get_option( 'wcpay_account_data', array() );
+		if ( empty( $account_data['data']['account_id'] ) ) {
+			return false;
+		}
+
+		if ( empty( $account_data['data']['details_submitted'] ) ) {
+			return false;
+		}
+		// We consider the store to have WooPayments account connected if account data in the WooPayments account cache
+		// contains details_submitted = true entry. This implies that WooPayments was connected.
+		return $account_data['data']['details_submitted'];
 	}
 }
