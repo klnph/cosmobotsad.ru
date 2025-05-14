@@ -1,3 +1,34 @@
+2.0.98: 2025-05-01
+- Improvement: Add filter for changing the them slider arrow icons
+- Improvement: Correctly respect "edit_plugins" capability in Blocksy Companion notice
+- Improvement: Infinite pagination - better compatibility with Variation Swatches for WooCommerce plugin
+- Improvement: WooCommerce import/export - gracefully handle the case when no custom data is present in CSV
+
+2.0.97: 2025-04-24
+- Improvement: Add color options for comments author name
+- Improvement: Customizer UI - properly cleanup style attribute for `ct-layers` and `ct-panel` option types
+- Improvement: Mini cart and language switcher - make sure the element dropdown is correctly positioned on mobile devices
+
+2.0.96: 2025-04-17
+- Improvement: Checkout page coupon field is hidden due to WooCommerce latest changes
+- Improvement: More reliable calculation and output of the "Content Edge Spacing" option
+- Improvement: Page title - proper description in author archives
+- Improvement: WooCommerce archive - add review counter and average ration option to "start rating" layer
+- Fix: Header "Button" padding is not working if values are unlinked and some sides are left unfilled
+
+2.0.95: 2025-04-04
+- Improvement: Minor accessibility improvements
+
+2.0.94: 2025-04-03
+- Improvement: Better integration with Dokan Pro Free Shipping and checkout page
+- Improvement: Button header element - make sure spacing value is correctly outputted in certain scenarios
+- Improvement: Comments form - small accessibility improvements
+- Improvement: Ensure the custom values are properly displayed in the typography options
+- Improvement: Improve post type selection logic in search and search box header elements
+- Improvement: Make the color picker option more resilient in the customizer
+- Improvement: WooCommerce custom quantity input - make sure styles and markup are applied only when needed
+- Fix: WooCommerce product archives - make sure the preview works correctly in customizer
+
 2.0.93: 2025-03-27
 - Improvement: Better integration with Premium Elementor Add-ons and the theme custom quantity input
 - Improvement: Correctly apply product gallery aspect ratio in the customizer preview
