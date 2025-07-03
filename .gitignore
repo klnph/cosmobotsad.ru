@@ -1,20 +1,18 @@
-/*
-!favicon.ico
-!robots.txt
-!.gitignore
-!wp-content/
-!yandex_*.html
-!mailru-*.html
+# Application
+/public/wp-content/*
+!public/wp-content/plugins/
+!public/wp-content/themes/
+!public/wp-content/uploads/.gitkeep
 
-wp-content/*
-!wp-content/plugins/
-!wp-content/themes/
+public/wp-content/plugins/*
 
-wp-content/plugins/akismet/
-wp-content/plugins/hello.php
+public/wp-content/themes/*
+!public/wp-content/themes/cosmobotsad
 
-wp-content/themes/*
-!wp-content/themes/blocksy
-!wp-content/themes/cosmobotsad
+.env
 
+# WordPress
+public/wp
 
+# Composer
+/vendor

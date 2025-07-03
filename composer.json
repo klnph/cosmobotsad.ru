@@ -1,0 +1,72 @@
+{
+    "name": "adishchev/wordpress",
+    "type": "project",
+    "keywords": [
+        "WordPress",
+        "Composer",
+        "bootstrap"
+    ],
+    "authors": [
+        {
+            "name": "Viacheslav Adishchev",
+            "email": "adischev@gmail.com"
+        }
+    ],
+    "require": {
+        "roots/wordpress": "*",
+        "vlucas/phpdotenv": "*",
+        "koodimonni-language/core-ru_ru": "*",
+        "wpackagist-plugin/google-tag-manager": "^1.0",
+        "wpackagist-plugin/contact-form-7": "^6.0",
+        "wpackagist-plugin/woocommerce": "^9.8",
+        "wpackagist-plugin/wp-seopress":"^8.7",
+        "wpackagist-plugin/yml-for-yandex-market":"^5.0",
+        "wpackagist-plugin/elementskit-lite":"^3.5.1",
+        "wpackagist-plugin/elementor": "^3.28",
+        "wpackagist-plugin/memcached": "*",
+        "wpackagist-theme/blocksy": "^2.1",
+        "wpackagist-plugin/template-kit-import": "^1.0.16"
+    },
+    "repositories": {
+        "wp-core": {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        "wp-languages": {
+            "type": "composer",
+            "url": "https://wp-languages.github.io"
+        }
+    },
+    "extra": {
+        "wordpress-install-dir": "public/wp",
+        "installer-paths": {
+            "public/wp-content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "public/wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "public/wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        },
+        "dropin-paths": {
+            "public/wp-content/languages/": [
+                "vendor:koodimonni-language"
+            ],
+            "public/wp-content/": [
+                "package:wpackagist-plugin/memcached:object-cache.php"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "mkdir -p public/wp-content/uplouds && sudo chown -R nginx public/wp-content/uplouds"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "roots/wordpress-core-installer": true,
+            "koodimonni/composer-dropin-installer": true
+        }
+    }
+}
