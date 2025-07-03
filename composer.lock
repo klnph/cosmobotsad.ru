@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "49c296485bca362624f677ec5a56a036",
+    "content-hash": "ee41394e5c455e0aff2235c08851a247",
     "packages": [
         {
             "name": "composer/installers",
@@ -151,6 +151,92 @@
                 }
             ],
             "time": "2024-06-24T20:46:46+00:00"
+        },
+        {
+            "name": "elementor/elementor-pro",
+            "version": "3.30.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:elementor/elementor-pro.git",
+                "reference": "82e0dd9ea4e8160e1be3f19443b1e7d5d7fa7710"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.elementor.com/download/3.30.0",
+                "reference": "82e0dd9ea4e8160e1be3f19443b1e7d5d7fa7710",
+                "shasum": ""
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "elementor/elementor-editor-testing": "0.0.3",
+                "humbug/php-scoper": "0.17.5",
+                "php-di/php-di": "6.4.0",
+                "phpunit/phpunit": "9.5.14",
+                "squizlabs/php_codesniffer": "^3.6",
+                "thor-juhasz/phpunit-coverage-check": "^0.3.0",
+                "wp-coding-standards/wpcs": "^2.3",
+                "yoast/phpunit-polyfills": "^1.0.1"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "classmap": [
+                    "vendor_prefixed/"
+                ]
+            },
+            "autoload-dev": {
+                "classmap": [
+                    "tests/phpunit/mock/"
+                ]
+            },
+            "scripts": {
+                "lint": [
+                    "phpcs --standard=ruleset.xml"
+                ],
+                "test": [
+                    "phpunit --testsuite elementor-pro"
+                ],
+                "test:multisite": [
+                    "WP_MULTISITE=1 phpunit --testsuite elementor-pro"
+                ],
+                "test:install": [
+                    "bash ./bin/install-wp-tests-local.sh"
+                ],
+                "coverage": [
+                    "composer run coverage:test && composer run coverage:check"
+                ],
+                "coverage:test": [
+                    "phpdbg -qrr vendor/phpunit/phpunit/phpunit --testsuite elementor-pro --coverage-clover coverage-report/clover.xml"
+                ],
+                "coverage:check": [
+                    "phpunit-coverage-check -t 20 coverage-report/clover.xml"
+                ],
+                "post-install-cmd": [
+                    "@php -r \"if (!file_exists('vendor_prefixed')) { mkdir('vendor_prefixed', 0755, true); }\"",
+                    "@php ./vendor/bin/php-scoper add-prefix --output-dir=./vendor_prefixed --config=php-scoper/dependency-injection.inc.php --force",
+                    "@php composer dump-autoload"
+                ],
+                "pre-autoload-dump": [
+                    "@php -r \"if (!file_exists('vendor_prefixed')) { mkdir('vendor_prefixed', 0755, true); }\""
+                ],
+                "post-update-cmd": [
+                    "@php -r \"if (!file_exists('vendor_prefixed')) { mkdir('vendor_prefixed', 0755, true); }\"",
+                    "@php ./vendor/bin/php-scoper add-prefix --output-dir=./vendor_prefixed --config=php-scoper/dependency-injection.inc.php --force",
+                    "@php composer dump-autoload"
+                ]
+            },
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Elementor team"
+                }
+            ],
+            "description": "WordPress website builder, with no limits of design. A website builder that delivers high-end page designs and advanced capabilities, never before seen on WordPress.",
+            "support": {
+                "source": "https://github.com/elementor/elementor-pro/tree/3.30.0"
+            },
+            "time": "2025-07-01T09:32:12+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -1049,10 +1135,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }

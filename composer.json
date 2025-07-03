@@ -25,7 +25,8 @@
         "wpackagist-plugin/elementor": "^3.28",
         "wpackagist-plugin/memcached": "*",
         "wpackagist-theme/blocksy": "^2.1",
-        "wpackagist-plugin/template-kit-import": "^1.0.16"
+        "wpackagist-plugin/template-kit-import": "^1.0.16",
+        "elementor/elementor-pro": "^3.25.0"
     },
     "repositories": {
         "wp-core": {
@@ -35,6 +36,11 @@
         "wp-languages": {
             "type": "composer",
             "url": "https://wp-languages.github.io"
+        },
+        "elementor-pro": {
+             "type": "composer",
+             "url": "https://composer.elementor.com",
+             "only": ["elementor/elementor-pro"]
         }
     },
     "extra": {
