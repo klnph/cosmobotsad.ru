@@ -1,5 +1,7 @@
 # Application
 /public/wp-content/*
+!public/wp-content/advanced-cache.php
+!public/wp-content/wp-cache-config.php
 !public/wp-content/plugins/
 !public/wp-content/themes/
 !public/wp-content/uploads/
