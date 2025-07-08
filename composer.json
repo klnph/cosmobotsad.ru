@@ -26,7 +26,8 @@
         "wpackagist-plugin/memcached": "*",
         "wpackagist-theme/blocksy": "^2.1",
         "wpackagist-plugin/template-kit-import": "^1.0.16",
-        "elementor/elementor-pro": "^3.25.0"
+        "elementor/elementor-pro": "^3.25.0",
+        "wpackagist-plugin/wp-super-cache": "^3.0.0"
     },
     "repositories": {
         "wp-core": {

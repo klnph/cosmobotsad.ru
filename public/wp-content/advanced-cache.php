@@ -1,0 +1,1 @@
+plugins/wp-super-cache/advanced-cache.php
