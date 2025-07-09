@@ -5,6 +5,8 @@ WP-Cache Config Sample File
 See wp-cache.php for author details.
 */
 
+$cache_time_interval = '3600';
+$wp_cache_debug_username = '103cbeed7426dabb9a07084b82a50fcb';
 $wp_cache_home_path = '/wp/';
 $wp_cache_slash_check = 1;
 $cache_page_secret = '1b58f65dce7c121eee719d36476d8243';
@@ -14,7 +16,7 @@ if ( ! defined('WPCACHEHOME') )
 $cache_compression = 0; // Super cache compression
 $cache_enabled = true;
 $super_cache_enabled = true;
-$cache_max_time = 3600; //in seconds
+$cache_max_time = 0;
 //$use_flock = true; // Set it true or false if you know what to use
 $cache_path = WP_CONTENT_DIR . '/cache/';
 $file_prefix = 'wp-cache-';
@@ -63,7 +65,7 @@ $wp_cache_debug_to_file = 0;
 $wp_super_cache_debug = 0;
 $wp_cache_debug_level = 5;
 $wp_cache_debug_ip = '';
-$wp_cache_debug_log = '';
+$wp_cache_debug_log = '1b13d9a509f225aaaf68a50f392bc876.php';
 $wp_cache_debug_email = '';
 $wp_cache_pages[ "search" ] = 0;
 $wp_cache_pages[ "feed" ] = 0;
@@ -89,11 +91,11 @@ $wp_supercache_304 = 0;
 $wp_cache_front_page_checks = 0;
 $wp_cache_disable_utf8 = 0;
 $wp_cache_no_cache_for_get = 0;
-$cache_scheduled_time = "00:00";
+$cache_scheduled_time = '01:00';
 $wp_cache_preload_interval = 1440;
-$cache_schedule_type = 'interval';
+$cache_schedule_type = 'time';
 $wp_cache_preload_posts = 68;
-$wp_cache_preload_on = 0;
+$wp_cache_preload_on = 1;
 $wp_cache_preload_taxonomies = 0;
 $wp_cache_preload_email_me = 0;
 $wp_cache_preload_email_volume = 'none';
