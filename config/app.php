@@ -19,8 +19,8 @@ $dotenv->ifPresent([
     'DISABLE_WP_CRON',
     'WP_DEBUG_DISPLAY',
     'WP_DEBUG_LOG',
-    'WP_CACHE',
-    'SCRIPT_DEBUG'
+    'SCRIPT_DEBUG',
+    'WP_CACHE'
 ])->isBoolean();
 
 /**
@@ -84,9 +84,9 @@ define( 'DISALLOW_FILE_MODS', !env( 'DISALLOW_FILE_MODS' ) ?: true );
 /**
  * Debugging Settings
  */
-define( 'WP_DEBUG_DISPLAY', false );
-define( 'WP_DEBUG_LOG',     false );
-define( 'SCRIPT_DEBUG',     false );
+define( 'WP_DEBUG_DISPLAY', env( 'WP_DEBUG_DISPLAY' ) ?:false );
+define( 'WP_DEBUG_LOG',     env( 'WP_DEBUG_LOG' )     ?: false );
+define( 'SCRIPT_DEBUG',     env( 'SCRIPT_DEBUG' )     ?: false );
 ini_set( 'display_errors', '0' );
 
 /**
