@@ -81,6 +81,8 @@ define( 'DISALLOW_FILE_EDIT', !env( 'DISALLOW_FILE_EDIT' ) ?: true );
 // Disable plugin and theme updates and installation from the admin
 define( 'DISALLOW_FILE_MODS', !env( 'DISALLOW_FILE_MODS' ) ?: true );
 
+define('FS_METHOD', !env('FS_METHOD') ?: 'direct');
+
 /**
  * Debugging Settings
  */
