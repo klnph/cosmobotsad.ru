@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "33e9b26980794a3854c8df433f69c079",
+    "content-hash": "15b4fa4056cd3a83db3d886b36a25332",
     "packages": [
         {
             "name": "composer/installers",
@@ -1085,15 +1085,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-seopress",
-            "version": "8.9.0.2",
+            "version": "9.3.0.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-seopress/",
-                "reference": "tags/8.9.0.2"
+                "reference": "tags/9.3.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-seopress.8.9.0.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-seopress.9.3.0.4.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"

@@ -19,7 +19,7 @@
         "wpackagist-plugin/google-tag-manager": "^1.0",
         "wpackagist-plugin/contact-form-7": "^6.0",
         "wpackagist-plugin/woocommerce": "^9.8",
-        "wpackagist-plugin/wp-seopress":"^8.7",
+        "wpackagist-plugin/wp-seopress": "9.*",
         "wpackagist-plugin/yml-for-yandex-market":"^5.0",
         "wpackagist-plugin/elementskit-lite":"^3.5.1",
         "wpackagist-plugin/elementor": "^3.28",
