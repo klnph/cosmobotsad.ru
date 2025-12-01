@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42bbea75adc2f5c2d473569b4473754a",
+    "content-hash": "33e9b26980794a3854c8df433f69c079",
     "packages": [
         {
             "name": "composer/installers",
@@ -154,23 +154,21 @@
         },
         {
             "name": "elementor/elementor-pro",
-            "version": "3.30.1",
+            "version": "3.33.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:elementor/elementor-pro.git",
-                "reference": "f0edf3a762b3c3fc4b96a3dcab25881a695d12c9"
+                "reference": "410694aa0ccb5ce31eb77189aba8823ed58d52b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.elementor.com/download/3.30.1",
-                "reference": "f0edf3a762b3c3fc4b96a3dcab25881a695d12c9",
+                "url": "https://composer.elementor.com/download/3.33.1",
+                "reference": "410694aa0ccb5ce31eb77189aba8823ed58d52b0",
                 "shasum": ""
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
                 "elementor/elementor-editor-testing": "0.0.3",
-                "humbug/php-scoper": "0.17.5",
-                "php-di/php-di": "6.4.0",
                 "phpunit/phpunit": "9.5.14",
                 "squizlabs/php_codesniffer": "^3.6",
                 "thor-juhasz/phpunit-coverage-check": "^0.3.0",
@@ -178,11 +176,6 @@
                 "yoast/phpunit-polyfills": "^1.0.1"
             },
             "type": "wordpress-plugin",
-            "autoload": {
-                "classmap": [
-                    "vendor_prefixed/"
-                ]
-            },
             "autoload-dev": {
                 "classmap": [
                     "tests/phpunit/mock/"
@@ -209,19 +202,6 @@
                 ],
                 "coverage:check": [
                     "phpunit-coverage-check -t 20 coverage-report/clover.xml"
-                ],
-                "post-install-cmd": [
-                    "@php -r \"if (!file_exists('vendor_prefixed')) { mkdir('vendor_prefixed', 0755, true); }\"",
-                    "@php ./vendor/bin/php-scoper add-prefix --output-dir=./vendor_prefixed --config=php-scoper/dependency-injection.inc.php --force",
-                    "@php composer dump-autoload"
-                ],
-                "pre-autoload-dump": [
-                    "@php -r \"if (!file_exists('vendor_prefixed')) { mkdir('vendor_prefixed', 0755, true); }\""
-                ],
-                "post-update-cmd": [
-                    "@php -r \"if (!file_exists('vendor_prefixed')) { mkdir('vendor_prefixed', 0755, true); }\"",
-                    "@php ./vendor/bin/php-scoper add-prefix --output-dir=./vendor_prefixed --config=php-scoper/dependency-injection.inc.php --force",
-                    "@php composer dump-autoload"
                 ]
             },
             "license": [
@@ -234,9 +214,9 @@
             ],
             "description": "WordPress website builder, with no limits of design. A website builder that delivers high-end page designs and advanced capabilities, never before seen on WordPress.",
             "support": {
-                "source": "https://github.com/elementor/elementor-pro/tree/3.30.1"
+                "source": "https://github.com/elementor/elementor-pro/tree/3.33.1"
             },
-            "time": "2025-07-22T13:21:46+00:00"
+            "time": "2025-11-11T11:59:16+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -302,10 +282,10 @@
         },
         {
             "name": "koodimonni-language/core-ru_ru",
-            "version": "6.8.2",
+            "version": "6.8.3",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/6.8.2/ru_RU.zip"
+                "url": "https://downloads.wordpress.org/translation/core/6.8.3/ru_RU.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -369,16 +349,16 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.9.3",
+            "version": "1.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "e3fac8b24f56113f7cb96af14958c0dd16330f54"
+                "reference": "638a154f8d4ee6a5cfa96d6a34dfbe0cffa9566d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/e3fac8b24f56113f7cb96af14958c0dd16330f54",
-                "reference": "e3fac8b24f56113f7cb96af14958c0dd16330f54",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/638a154f8d4ee6a5cfa96d6a34dfbe0cffa9566d",
+                "reference": "638a154f8d4ee6a5cfa96d6a34dfbe0cffa9566d",
                 "shasum": ""
             },
             "require": {
@@ -386,7 +366,7 @@
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.2",
-                "phpunit/phpunit": "^8.5.39 || ^9.6.20 || ^10.5.28"
+                "phpunit/phpunit": "^8.5.44 || ^9.6.25 || ^10.5.53 || ^11.5.34"
             },
             "type": "library",
             "extra": {
@@ -428,7 +408,7 @@
             ],
             "support": {
                 "issues": "https://github.com/schmittjoh/php-option/issues",
-                "source": "https://github.com/schmittjoh/php-option/tree/1.9.3"
+                "source": "https://github.com/schmittjoh/php-option/tree/1.9.4"
             },
             "funding": [
                 {
@@ -440,11 +420,11 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-20T21:41:07+00:00"
+            "time": "2025-08-21T11:53:16+00:00"
         },
         {
             "name": "roots/wordpress",
-            "version": "6.8.2",
+            "version": "6.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -475,7 +455,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/6.8.2"
+                "source": "https://github.com/roots/wordpress/tree/6.8.3"
             },
             "funding": [
                 {
@@ -554,23 +534,23 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "6.8.2",
+            "version": "6.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.8.2"
+                "reference": "6.8.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-6.8.2-no-content.zip",
-                "reference": "6.8.2",
-                "shasum": "7d8dcb839f4754e331d93b86f9adc8c171d81e97"
+                "url": "https://downloads.wordpress.org/release/wordpress-6.8.3-no-content.zip",
+                "reference": "6.8.3",
+                "shasum": "2c34ba506afd8061d96cde50b2c92f109c10d2c8"
             },
             "require": {
                 "php": ">= 7.2.24"
             },
             "provide": {
-                "wordpress/core-implementation": "6.8.2"
+                "wordpress/core-implementation": "6.8.3"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -621,11 +601,11 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-07-15T15:29:08+00:00"
+            "time": "2025-09-30T18:16:31+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -684,7 +664,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -696,6 +676,10 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -704,7 +688,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -765,7 +749,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -777,6 +761,10 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -785,7 +773,7 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -845,7 +833,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -854,6 +842,10 @@
                 },
                 {
                     "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
                     "type": "github"
                 },
                 {
@@ -949,15 +941,15 @@
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
-            "version": "6.1",
+            "version": "6.1.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/contact-form-7/",
-                "reference": "tags/6.1"
+                "reference": "tags/6.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.6.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.6.1.4.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -967,15 +959,15 @@
         },
         {
             "name": "wpackagist-plugin/elementor",
-            "version": "3.30.3",
+            "version": "3.33.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/elementor/",
-                "reference": "tags/3.30.3"
+                "reference": "tags/3.33.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/elementor.3.30.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/elementor.3.33.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -985,15 +977,15 @@
         },
         {
             "name": "wpackagist-plugin/elementskit-lite",
-            "version": "3.5.6",
+            "version": "3.7.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/elementskit-lite/",
-                "reference": "tags/3.5.6"
+                "reference": "tags/3.7.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/elementskit-lite.3.5.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/elementskit-lite.3.7.6.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1056,6 +1048,24 @@
             "homepage": "https://wordpress.org/plugins/template-kit-import/"
         },
         {
+            "name": "wpackagist-plugin/vk-ads-pixel",
+            "version": "1.0.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/vk-ads-pixel/",
+                "reference": "tags/1.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/vk-ads-pixel.1.0.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/vk-ads-pixel/"
+        },
+        {
             "name": "wpackagist-plugin/woocommerce",
             "version": "9.9.5",
             "source": {
@@ -1093,15 +1103,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-super-cache",
-            "version": "3.0.0",
+            "version": "3.0.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-super-cache/",
-                "reference": "tags/3.0.0"
+                "reference": "tags/3.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-super-cache.3.0.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-super-cache.3.0.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1129,15 +1139,15 @@
         },
         {
             "name": "wpackagist-plugin/yml-for-yandex-market",
-            "version": "5.0.17",
+            "version": "5.0.24",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/yml-for-yandex-market/",
-                "reference": "tags/5.0.17"
+                "reference": "tags/5.0.24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/yml-for-yandex-market.5.0.17.zip"
+                "url": "https://downloads.wordpress.org/plugin/yml-for-yandex-market.5.0.24.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1147,15 +1157,15 @@
         },
         {
             "name": "wpackagist-theme/blocksy",
-            "version": "2.1.4",
+            "version": "2.1.22",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/blocksy/",
-                "reference": "2.1.4"
+                "reference": "2.1.22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/blocksy.2.1.4.zip"
+                "url": "https://downloads.wordpress.org/theme/blocksy.2.1.22.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
