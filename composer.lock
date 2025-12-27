@@ -154,16 +154,16 @@
         },
         {
             "name": "elementor/elementor-pro",
-            "version": "3.33.1",
+            "version": "3.34.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:elementor/elementor-pro.git",
-                "reference": "410694aa0ccb5ce31eb77189aba8823ed58d52b0"
+                "reference": "629a61137bae595894319df34ba8521d09dd19cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.elementor.com/download/3.33.1",
-                "reference": "410694aa0ccb5ce31eb77189aba8823ed58d52b0",
+                "url": "https://composer.elementor.com/download/elementor/elementor-pro/3.34.0",
+                "reference": "629a61137bae595894319df34ba8521d09dd19cf",
                 "shasum": ""
             },
             "require-dev": {
@@ -214,9 +214,9 @@
             ],
             "description": "WordPress website builder, with no limits of design. A website builder that delivers high-end page designs and advanced capabilities, never before seen on WordPress.",
             "support": {
-                "source": "https://github.com/elementor/elementor-pro/tree/3.33.1"
+                "source": "https://github.com/elementor/elementor-pro/tree/3.34.0"
             },
-            "time": "2025-11-11T11:59:16+00:00"
+            "time": "2025-12-22T11:17:35+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -282,10 +282,10 @@
         },
         {
             "name": "koodimonni-language/core-ru_ru",
-            "version": "6.8.3",
+            "version": "6.9",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/6.8.3/ru_RU.zip"
+                "url": "https://downloads.wordpress.org/translation/core/6.9/ru_RU.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -424,7 +424,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "6.8.3",
+            "version": "6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -455,7 +455,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/6.8.3"
+                "source": "https://github.com/roots/wordpress/tree/6.9"
             },
             "funding": [
                 {
@@ -534,23 +534,23 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "6.8.3",
+            "version": "6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.8.3"
+                "reference": "6.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-6.8.3-no-content.zip",
-                "reference": "6.8.3",
-                "shasum": "2c34ba506afd8061d96cde50b2c92f109c10d2c8"
+                "url": "https://downloads.wordpress.org/release/wordpress-6.9-no-content.zip",
+                "reference": "6.9",
+                "shasum": "2d8cb4b253b690e255afde1d451e87380e6a5cb5"
             },
             "require": {
                 "php": ">= 7.2.24"
             },
             "provide": {
-                "wordpress/core-implementation": "6.8.3"
+                "wordpress/core-implementation": "6.9"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -601,7 +601,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-09-30T18:16:31+00:00"
+            "time": "2025-12-02T19:09:36+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -959,15 +959,15 @@
         },
         {
             "name": "wpackagist-plugin/elementor",
-            "version": "3.33.2",
+            "version": "3.34.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/elementor/",
-                "reference": "tags/3.33.2"
+                "reference": "tags/3.34.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/elementor.3.33.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/elementor.3.34.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -977,15 +977,15 @@
         },
         {
             "name": "wpackagist-plugin/elementskit-lite",
-            "version": "3.7.6",
+            "version": "3.7.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/elementskit-lite/",
-                "reference": "tags/3.7.6"
+                "reference": "tags/3.7.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/elementskit-lite.3.7.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/elementskit-lite.3.7.8.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1067,15 +1067,15 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce",
-            "version": "10.3.5",
+            "version": "10.4.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce/",
-                "reference": "tags/10.3.5"
+                "reference": "tags/10.4.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce.10.3.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.10.4.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1085,15 +1085,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-seopress",
-            "version": "9.3.0.4",
+            "version": "9.4.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-seopress/",
-                "reference": "tags/9.3.0.4"
+                "reference": "tags/9.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-seopress.9.3.0.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-seopress.9.4.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1139,15 +1139,15 @@
         },
         {
             "name": "wpackagist-plugin/yml-for-yandex-market",
-            "version": "5.0.24",
+            "version": "5.0.26",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/yml-for-yandex-market/",
-                "reference": "tags/5.0.24"
+                "reference": "tags/5.0.26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/yml-for-yandex-market.5.0.24.zip"
+                "url": "https://downloads.wordpress.org/plugin/yml-for-yandex-market.5.0.26.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1157,15 +1157,15 @@
         },
         {
             "name": "wpackagist-theme/blocksy",
-            "version": "2.1.22",
+            "version": "2.1.23",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/blocksy/",
-                "reference": "2.1.22"
+                "reference": "2.1.23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/blocksy.2.1.22.zip"
+                "url": "https://downloads.wordpress.org/theme/blocksy.2.1.23.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
