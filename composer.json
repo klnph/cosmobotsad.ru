@@ -29,7 +29,8 @@
         "elementor/elementor-pro": "^3.25.0",
         "wpackagist-plugin/wp-super-cache": "^3.0.0",
         "wpackagist-plugin/yandex-metrica": "^2.0",
-        "wpackagist-plugin/vk-ads-pixel": "1.0.*"
+        "wpackagist-plugin/vk-ads-pixel": "1.0.*",
+        "wpackagist-theme/hello-elementor": "*"
     },
     "repositories": {
         "wp-core": {
