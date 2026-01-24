@@ -17,6 +17,7 @@ $dotenv->ifPresent([
     'DISALLOW_FILE_EDIT',
     'DISALLOW_FILE_MODS',
     'DISABLE_WP_CRON',
+    'WP_DEBUG',
     'WP_DEBUG_DISPLAY',
     'WP_DEBUG_LOG',
     'SCRIPT_DEBUG',
@@ -81,12 +82,20 @@ define( 'DISALLOW_FILE_EDIT', !env( 'DISALLOW_FILE_EDIT' ) ?: true );
 // Disable plugin and theme updates and installation from the admin
 define( 'DISALLOW_FILE_MODS', !env( 'DISALLOW_FILE_MODS' ) ?: true );
 
+if ( env('WP_MEMORY_LIMIT') ) {
+    define('WP_MEMORY_LIMIT', env('WP_MEMORY_LIMIT') );
+}
+if ( env('WP_MAX_MEMORY_LIMIT') ) {
+    define('WP_MAX_MEMORY_LIMIT', env('WP_MAX_MEMORY_LIMIT') );
+}
+
 define('FS_METHOD', !env('FS_METHOD') ?: 'direct');
 
 /**
  * Debugging Settings
  */
-define( 'WP_DEBUG_DISPLAY', env( 'WP_DEBUG_DISPLAY' ) ?:false );
+define( 'WP_DEBUG',         env( 'WP_DEBUG' )         ?: false );
+define( 'WP_DEBUG_DISPLAY', env( 'WP_DEBUG_DISPLAY' ) ?: false );
 define( 'WP_DEBUG_LOG',     env( 'WP_DEBUG_LOG' )     ?: false );
 define( 'SCRIPT_DEBUG',     env( 'SCRIPT_DEBUG' )     ?: false );
 ini_set( 'display_errors', '0' );
