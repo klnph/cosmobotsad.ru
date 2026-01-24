@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5dcd71ed57483f8fe86dfa5d81a95a89",
+    "content-hash": "e7b164e6909c972e2ea40638d797f5af",
     "packages": [
         {
             "name": "composer/installers",
@@ -1157,24 +1157,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/yml-for-yandex-market/"
-        },
-        {
-            "name": "wpackagist-theme/blocksy",
-            "version": "2.1.25",
-            "source": {
-                "type": "svn",
-                "url": "https://themes.svn.wordpress.org/blocksy/",
-                "reference": "2.1.25"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/blocksy.2.1.25.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-theme",
-            "homepage": "https://wordpress.org/themes/blocksy/"
         },
         {
             "name": "wpackagist-theme/hello-elementor",
