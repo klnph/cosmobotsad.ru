@@ -154,16 +154,16 @@
         },
         {
             "name": "elementor/elementor-pro",
-            "version": "3.34.0",
+            "version": "3.34.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:elementor/elementor-pro.git",
-                "reference": "629a61137bae595894319df34ba8521d09dd19cf"
+                "reference": "a04528c66808d51dd5eb5ee6d2e30fbcf16317f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer.elementor.com/download/elementor/elementor-pro/3.34.0",
-                "reference": "629a61137bae595894319df34ba8521d09dd19cf",
+                "url": "https://composer.elementor.com/download/elementor/elementor-pro/3.34.2",
+                "reference": "a04528c66808d51dd5eb5ee6d2e30fbcf16317f8",
                 "shasum": ""
             },
             "require-dev": {
@@ -184,6 +184,9 @@
             "scripts": {
                 "lint": [
                     "phpcs --standard=ruleset.xml"
+                ],
+                "format": [
+                    "vendor/bin/phpcbf --extensions=php --standard=./ruleset.xml"
                 ],
                 "test": [
                     "phpunit --testsuite elementor-pro"
@@ -214,30 +217,30 @@
             ],
             "description": "WordPress website builder, with no limits of design. A website builder that delivers high-end page designs and advanced capabilities, never before seen on WordPress.",
             "support": {
-                "source": "https://github.com/elementor/elementor-pro/tree/3.34.0"
+                "source": "https://github.com/elementor/elementor-pro/tree/3.34.2"
             },
-            "time": "2025-12-22T11:17:35+00:00"
+            "time": "2026-01-22T15:02:27+00:00"
         },
         {
             "name": "graham-campbell/result-type",
-            "version": "v1.1.3",
+            "version": "v1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Result-Type.git",
-                "reference": "3ba905c11371512af9d9bdd27d99b782216b6945"
+                "reference": "e01f4a821471308ba86aa202fed6698b6b695e3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/3ba905c11371512af9d9bdd27d99b782216b6945",
-                "reference": "3ba905c11371512af9d9bdd27d99b782216b6945",
+                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/e01f4a821471308ba86aa202fed6698b6b695e3b",
+                "reference": "e01f4a821471308ba86aa202fed6698b6b695e3b",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2.5 || ^8.0",
-                "phpoption/phpoption": "^1.9.3"
+                "phpoption/phpoption": "^1.9.5"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.5.39 || ^9.6.20 || ^10.5.28"
+                "phpunit/phpunit": "^8.5.41 || ^9.6.22 || ^10.5.45 || ^11.5.7"
             },
             "type": "library",
             "autoload": {
@@ -266,7 +269,7 @@
             ],
             "support": {
                 "issues": "https://github.com/GrahamCampbell/Result-Type/issues",
-                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.3"
+                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.4"
             },
             "funding": [
                 {
@@ -278,7 +281,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-20T21:45:45+00:00"
+            "time": "2025-12-27T19:43:20+00:00"
         },
         {
             "name": "koodimonni-language/core-ru_ru",
@@ -349,16 +352,16 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.9.4",
+            "version": "1.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "638a154f8d4ee6a5cfa96d6a34dfbe0cffa9566d"
+                "reference": "75365b91986c2405cf5e1e012c5595cd487a98be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/638a154f8d4ee6a5cfa96d6a34dfbe0cffa9566d",
-                "reference": "638a154f8d4ee6a5cfa96d6a34dfbe0cffa9566d",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/75365b91986c2405cf5e1e012c5595cd487a98be",
+                "reference": "75365b91986c2405cf5e1e012c5595cd487a98be",
                 "shasum": ""
             },
             "require": {
@@ -408,7 +411,7 @@
             ],
             "support": {
                 "issues": "https://github.com/schmittjoh/php-option/issues",
-                "source": "https://github.com/schmittjoh/php-option/tree/1.9.4"
+                "source": "https://github.com/schmittjoh/php-option/tree/1.9.5"
             },
             "funding": [
                 {
@@ -420,7 +423,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-21T11:53:16+00:00"
+            "time": "2025-12-27T19:41:33+00:00"
         },
         {
             "name": "roots/wordpress",
@@ -857,26 +860,26 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v5.6.2",
+            "version": "v5.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "24ac4c74f91ee2c193fa1aaa5c249cb0822809af"
+                "reference": "955e7815d677a3eaa7075231212f2110983adecc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/24ac4c74f91ee2c193fa1aaa5c249cb0822809af",
-                "reference": "24ac4c74f91ee2c193fa1aaa5c249cb0822809af",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/955e7815d677a3eaa7075231212f2110983adecc",
+                "reference": "955e7815d677a3eaa7075231212f2110983adecc",
                 "shasum": ""
             },
             "require": {
                 "ext-pcre": "*",
-                "graham-campbell/result-type": "^1.1.3",
+                "graham-campbell/result-type": "^1.1.4",
                 "php": "^7.2.5 || ^8.0",
-                "phpoption/phpoption": "^1.9.3",
-                "symfony/polyfill-ctype": "^1.24",
-                "symfony/polyfill-mbstring": "^1.24",
-                "symfony/polyfill-php80": "^1.24"
+                "phpoption/phpoption": "^1.9.5",
+                "symfony/polyfill-ctype": "^1.26",
+                "symfony/polyfill-mbstring": "^1.26",
+                "symfony/polyfill-php80": "^1.26"
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.2",
@@ -925,7 +928,7 @@
             ],
             "support": {
                 "issues": "https://github.com/vlucas/phpdotenv/issues",
-                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.2"
+                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.3"
             },
             "funding": [
                 {
@@ -937,7 +940,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-04-30T23:37:27+00:00"
+            "time": "2025-12-27T19:49:13+00:00"
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
@@ -959,15 +962,15 @@
         },
         {
             "name": "wpackagist-plugin/elementor",
-            "version": "3.34.0",
+            "version": "3.34.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/elementor/",
-                "reference": "tags/3.34.0"
+                "reference": "tags/3.34.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/elementor.3.34.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/elementor.3.34.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1157,15 +1160,15 @@
         },
         {
             "name": "wpackagist-theme/blocksy",
-            "version": "2.1.23",
+            "version": "2.1.25",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/blocksy/",
-                "reference": "2.1.23"
+                "reference": "2.1.25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/blocksy.2.1.23.zip"
+                "url": "https://downloads.wordpress.org/theme/blocksy.2.1.25.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
