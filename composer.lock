@@ -154,22 +154,15 @@
         },
         {
             "name": "elementor/elementor-pro",
-            "version": "3.34.2",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:elementor/elementor-pro.git",
-                "reference": "a04528c66808d51dd5eb5ee6d2e30fbcf16317f8"
-            },
+            "version": "3.35.1",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.elementor.com/download/elementor/elementor-pro/3.34.2",
-                "reference": "a04528c66808d51dd5eb5ee6d2e30fbcf16317f8",
-                "shasum": ""
+                "url": "https://composer.elementor.com/download/elementor/elementor-pro/3.35.1"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
                 "elementor/elementor-editor-testing": "0.0.3",
-                "phpunit/phpunit": "9.5.14",
+                "phpunit/phpunit": "9.6.34",
                 "squizlabs/php_codesniffer": "^3.6",
                 "thor-juhasz/phpunit-coverage-check": "^0.3.0",
                 "wp-coding-standards/wpcs": "^2.3",
@@ -216,10 +209,7 @@
                 }
             ],
             "description": "WordPress website builder, with no limits of design. A website builder that delivers high-end page designs and advanced capabilities, never before seen on WordPress.",
-            "support": {
-                "source": "https://github.com/elementor/elementor-pro/tree/3.34.2"
-            },
-            "time": "2026-01-22T15:02:27+00:00"
+            "time": "2026-02-11T10:07:34+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -285,10 +275,10 @@
         },
         {
             "name": "koodimonni-language/core-ru_ru",
-            "version": "6.9",
+            "version": "7.0",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/6.9/ru_RU.zip"
+                "url": "https://downloads.wordpress.org/translation/core/7.0/ru_RU.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -427,20 +417,20 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "6.9",
+            "version": "7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
-                "reference": "29e4eb49b2f4c591e39d4eb6705a27cf1ea40e45"
+                "reference": "eb3d108f216618a858dcaed691e00e68f0ccff9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/wordpress/zipball/29e4eb49b2f4c591e39d4eb6705a27cf1ea40e45",
-                "reference": "29e4eb49b2f4c591e39d4eb6705a27cf1ea40e45",
+                "url": "https://api.github.com/repos/roots/wordpress/zipball/eb3d108f216618a858dcaed691e00e68f0ccff9f",
+                "reference": "eb3d108f216618a858dcaed691e00e68f0ccff9f",
                 "shasum": ""
             },
             "require": {
-                "roots/wordpress-core-installer": "^3.0",
+                "roots/wordpress-core-installer": "^4.0",
                 "roots/wordpress-no-content": "self.version"
             },
             "type": "metapackage",
@@ -458,7 +448,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/6.9"
+                "source": "https://github.com/roots/wordpress/tree/7.0"
             },
             "funding": [
                 {
@@ -466,24 +456,24 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-23T18:54:22+00:00"
+            "time": "2026-03-22T13:26:54+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
-            "version": "3.0.0",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress-core-installer.git",
-                "reference": "714d2e2a9e523f6e7bde4810d5a04aedf0ec217f"
+                "reference": "85d3589252eb93eee836facf33b54ce30c565bea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/wordpress-core-installer/zipball/714d2e2a9e523f6e7bde4810d5a04aedf0ec217f",
-                "reference": "714d2e2a9e523f6e7bde4810d5a04aedf0ec217f",
+                "url": "https://api.github.com/repos/roots/wordpress-core-installer/zipball/85d3589252eb93eee836facf33b54ce30c565bea",
+                "reference": "85d3589252eb93eee836facf33b54ce30c565bea",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0 || ^2.0",
+                "composer-plugin-api": "^2.0",
                 "php": ">=7.2.24"
             },
             "conflict": {
@@ -493,7 +483,7 @@
                 "johnpbloch/wordpress-core-installer": "*"
             },
             "require-dev": {
-                "composer/composer": "^1.0 || ^2.0",
+                "composer/composer": "^2.0",
                 "phpunit/phpunit": "^8.5"
             },
             "type": "composer-plugin",
@@ -525,7 +515,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress-core-installer/issues",
-                "source": "https://github.com/roots/wordpress-core-installer/tree/3.0.0"
+                "source": "https://github.com/roots/wordpress-core-installer/tree/v4.0.0"
             },
             "funding": [
                 {
@@ -533,27 +523,27 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-23T18:47:25+00:00"
+            "time": "2026-03-22T03:17:23+00:00"
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "6.9",
+            "version": "7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.9"
+                "reference": "7.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-6.9-no-content.zip",
-                "reference": "6.9",
-                "shasum": "2d8cb4b253b690e255afde1d451e87380e6a5cb5"
+                "url": "https://downloads.w.org/release/wordpress-7.0-no-content.zip",
+                "reference": "7.0",
+                "shasum": "2ffdd31a747f68e3e5633064993997a7ce881975"
             },
             "require": {
-                "php": ">= 7.2.24"
+                "php": ">= 7.4"
             },
             "provide": {
-                "wordpress/core-implementation": "6.9"
+                "wordpress/core-implementation": "7.0"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -604,20 +594,20 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-12-02T19:09:36+00:00"
+            "time": "2026-05-20T18:34:28+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.33.0",
+            "version": "v1.37.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638"
+                "reference": "141046a8f9477948ff284fa65be2095baafb94f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/a3cc8b044a6ea513310cbd48ef7333b384945638",
-                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/141046a8f9477948ff284fa65be2095baafb94f2",
+                "reference": "141046a8f9477948ff284fa65be2095baafb94f2",
                 "shasum": ""
             },
             "require": {
@@ -667,7 +657,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.37.0"
             },
             "funding": [
                 {
@@ -687,20 +677,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-09T11:45:10+00:00"
+            "time": "2026-04-10T16:19:22+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.33.0",
+            "version": "v1.38.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493"
+                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/6d857f4d76bd4b343eac26d6b539585d2bc56493",
-                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
+                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
                 "shasum": ""
             },
             "require": {
@@ -752,7 +742,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.2"
             },
             "funding": [
                 {
@@ -772,20 +762,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-23T08:48:59+00:00"
+            "time": "2026-05-27T06:59:30+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.33.0",
+            "version": "v1.37.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "0cc9dd0f17f61d8131e7df6b84bd344899fe2608"
+                "reference": "dfb55726c3a76ea3b6459fcfda1ec2d80a682411"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/0cc9dd0f17f61d8131e7df6b84bd344899fe2608",
-                "reference": "0cc9dd0f17f61d8131e7df6b84bd344899fe2608",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/dfb55726c3a76ea3b6459fcfda1ec2d80a682411",
+                "reference": "dfb55726c3a76ea3b6459fcfda1ec2d80a682411",
                 "shasum": ""
             },
             "require": {
@@ -836,7 +826,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.37.0"
             },
             "funding": [
                 {
@@ -856,7 +846,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-01-02T08:10:11+00:00"
+            "time": "2026-04-10T16:19:22+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -944,15 +934,15 @@
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
-            "version": "6.1.4",
+            "version": "6.1.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/contact-form-7/",
-                "reference": "tags/6.1.4"
+                "reference": "tags/6.1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.6.1.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.6.1.6.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -962,15 +952,15 @@
         },
         {
             "name": "wpackagist-plugin/elementor",
-            "version": "3.34.2",
+            "version": "3.35.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/elementor/",
-                "reference": "tags/3.34.2"
+                "reference": "tags/3.35.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/elementor.3.34.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/elementor.3.35.9.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -980,15 +970,15 @@
         },
         {
             "name": "wpackagist-plugin/elementskit-lite",
-            "version": "3.7.8",
+            "version": "3.9.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/elementskit-lite/",
-                "reference": "tags/3.7.8"
+                "reference": "tags/3.9.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/elementskit-lite.3.7.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/elementskit-lite.3.9.9.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -998,15 +988,15 @@
         },
         {
             "name": "wpackagist-plugin/google-tag-manager",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-tag-manager/",
-                "reference": "tags/1.0.3"
+                "reference": "tags/1.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-tag-manager.1.0.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/google-tag-manager.1.0.4.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1070,15 +1060,15 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce",
-            "version": "10.4.3",
+            "version": "10.9.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce/",
-                "reference": "tags/10.4.3"
+                "reference": "tags/10.9.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce.10.4.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.10.9.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1088,15 +1078,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-seopress",
-            "version": "9.4.1",
+            "version": "9.9.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-seopress/",
-                "reference": "tags/9.4.1"
+                "reference": "tags/9.9.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-seopress.9.4.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-seopress.9.9.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1106,15 +1096,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-super-cache",
-            "version": "3.0.3",
+            "version": "3.1.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-super-cache/",
-                "reference": "tags/3.0.3"
+                "reference": "tags/3.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-super-cache.3.0.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-super-cache.3.1.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1124,15 +1114,15 @@
         },
         {
             "name": "wpackagist-plugin/yandex-metrica",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/yandex-metrica/",
-                "reference": "tags/2.0.2"
+                "reference": "tags/2.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/yandex-metrica.2.0.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/yandex-metrica.2.0.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1142,15 +1132,15 @@
         },
         {
             "name": "wpackagist-plugin/yml-for-yandex-market",
-            "version": "5.0.26",
+            "version": "5.5.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/yml-for-yandex-market/",
-                "reference": "tags/5.0.26"
+                "reference": "tags/5.5.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/yml-for-yandex-market.5.0.26.zip"
+                "url": "https://downloads.wordpress.org/plugin/yml-for-yandex-market.5.5.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1160,15 +1150,15 @@
         },
         {
             "name": "wpackagist-theme/hello-elementor",
-            "version": "3.4.6",
+            "version": "3.4.9",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/hello-elementor/",
-                "reference": "3.4.6"
+                "reference": "3.4.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/hello-elementor.3.4.6.zip"
+                "url": "https://downloads.wordpress.org/theme/hello-elementor.3.4.9.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
