@@ -275,10 +275,10 @@
         },
         {
             "name": "koodimonni-language/core-ru_ru",
-            "version": "7.0",
+            "version": "7.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/7.0/ru_RU.zip"
+                "url": "https://downloads.wordpress.org/translation/core/7.0.1/ru_RU.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -417,7 +417,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "7.0",
+            "version": "7.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -448,7 +448,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/7.0"
+                "source": "https://github.com/roots/wordpress/tree/7.0.1"
             },
             "funding": [
                 {
@@ -527,23 +527,23 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "7.0",
+            "version": "7.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "7.0"
+                "reference": "7.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.w.org/release/wordpress-7.0-no-content.zip",
-                "reference": "7.0",
-                "shasum": "2ffdd31a747f68e3e5633064993997a7ce881975"
+                "url": "https://downloads.w.org/release/wordpress-7.0.1-no-content.zip",
+                "reference": "7.0.1",
+                "shasum": "808ab53004d9c6fe69175855cd7d2317fe9502b3"
             },
             "require": {
                 "php": ">= 7.4"
             },
             "provide": {
-                "wordpress/core-implementation": "7.0"
+                "wordpress/core-implementation": "7.0.1"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -594,7 +594,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-05-20T18:34:28+00:00"
+            "time": "2026-07-09T17:26:02+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -850,16 +850,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v5.6.3",
+            "version": "v5.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "955e7815d677a3eaa7075231212f2110983adecc"
+                "reference": "416df702837983f8d5ff48c9c3fee4f5f57b980b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/955e7815d677a3eaa7075231212f2110983adecc",
-                "reference": "955e7815d677a3eaa7075231212f2110983adecc",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/416df702837983f8d5ff48c9c3fee4f5f57b980b",
+                "reference": "416df702837983f8d5ff48c9c3fee4f5f57b980b",
                 "shasum": ""
             },
             "require": {
@@ -918,7 +918,7 @@
             ],
             "support": {
                 "issues": "https://github.com/vlucas/phpdotenv/issues",
-                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.3"
+                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.4"
             },
             "funding": [
                 {
@@ -930,7 +930,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-27T19:49:13+00:00"
+            "time": "2026-07-06T19:11:50+00:00"
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
@@ -970,15 +970,15 @@
         },
         {
             "name": "wpackagist-plugin/elementskit-lite",
-            "version": "3.9.9",
+            "version": "3.10.02",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/elementskit-lite/",
-                "reference": "tags/3.9.9"
+                "reference": "tags/3.10.02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/elementskit-lite.3.9.9.zip"
+                "url": "https://downloads.wordpress.org/plugin/elementskit-lite.3.10.02.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1060,15 +1060,15 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce",
-            "version": "10.9.1",
+            "version": "10.9.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce/",
-                "reference": "tags/10.9.1"
+                "reference": "tags/10.9.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce.10.9.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.10.9.4.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1132,15 +1132,15 @@
         },
         {
             "name": "wpackagist-plugin/yml-for-yandex-market",
-            "version": "5.5.1",
+            "version": "5.6.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/yml-for-yandex-market/",
-                "reference": "tags/5.5.1"
+                "reference": "tags/5.6.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/yml-for-yandex-market.5.5.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/yml-for-yandex-market.5.6.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
