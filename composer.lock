@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7b164e6909c972e2ea40638d797f5af",
+    "content-hash": "7099d64bf82e475e83f0132412f66a77",
     "packages": [
         {
             "name": "composer/installers",
@@ -1003,24 +1003,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/google-tag-manager/"
-        },
-        {
-            "name": "wpackagist-plugin/memcached",
-            "version": "4.0.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/memcached/",
-                "reference": "tags/4.0.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/memcached.4.0.0.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/memcached/"
         },
         {
             "name": "wpackagist-plugin/template-kit-import",

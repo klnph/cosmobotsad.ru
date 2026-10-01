@@ -23,7 +23,6 @@
         "wpackagist-plugin/yml-for-yandex-market":"^5.0",
         "wpackagist-plugin/elementskit-lite":"^3.5.1",
         "wpackagist-plugin/elementor": "^3.28",
-        "wpackagist-plugin/memcached": "*",
         "wpackagist-plugin/template-kit-import": "^1.0.16",
         "elementor/elementor-pro": "^3.25.0",
         "wpackagist-plugin/wp-super-cache": "^3.0.0",
